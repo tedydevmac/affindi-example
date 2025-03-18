@@ -70,3 +70,12 @@ body {
   display: flex;
   gap: 1rem;
 }
+
+/* ...existing dark mode styles... */
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Add any other light mode specific styles here */

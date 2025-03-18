@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ShoppingCart from "./pages/ShoppingCart";
 import Main from "./pages/Main";
@@ -7,6 +7,8 @@ import {
   useAffinidiProfile,
 } from "@affinidi/affinidi-react-auth";
 import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import "./App.css"; // Import the new CSS file
 
 const apiBaseUrl = "http://localhost:5173";
 
@@ -64,6 +66,13 @@ const Auth: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const savedMode = localStorage.getItem("isDarkMode");
+    const isDarkMode = savedMode ? JSON.parse(savedMode) : true;
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    document.body.classList.toggle("light-mode", !isDarkMode);
+  }, []);
+
   return (
     <Router>
       <Routes>
@@ -71,6 +80,7 @@ const App: React.FC = () => {
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/auth/callback" element={<Main />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );

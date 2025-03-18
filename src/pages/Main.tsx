@@ -27,14 +27,14 @@ const Main: React.FC = () => {
           <a href="" onClick={() => navigate("/profile", { state: {} })}>
             <IoPersonCircleSharp className="icon" />
           </a>
-          <a href="">
+          <a href="" onClick={() => navigate("/settings", { state: {} })}>
             <IoMdSettings className="icon" />
           </a>
         </div>
       </div>
 
       <div className="card-container">
-        <text>For You</text>
+        <text style={{ fontWeight: "bold", fontSize: 17 }}>For You</text>
         <div className="card-row">
           <Card
             itemTitle="Ticket to Japan"
@@ -58,7 +58,7 @@ const Main: React.FC = () => {
             imgSrc={house2}
           />
         </div>
-        <text>Books</text>
+        <text style={{ fontWeight: "bold", fontSize: 17 }}>Books</text>
         <div className="card-row">
           <Card
             itemTitle="Book 1"
@@ -76,13 +76,13 @@ const Main: React.FC = () => {
           />
           <Card
             itemTitle="Book 3"
-            itemDesc="Get a Book 3for yourself!"
+            itemDesc="Get a Book 3 for yourself!"
             price="13.99"
             daysLater={7}
             imgSrc={book}
           />
         </div>
-        <text>Explore</text>
+        <text style={{ fontWeight: "bold", fontSize: 17 }}>Explore</text>
         <div className="card-row">
           <Card
             itemTitle="Ai Hoshino Poster"
@@ -93,7 +93,7 @@ const Main: React.FC = () => {
           />
           <Card
             itemTitle="Koyomi Araragi"
-            itemDesc="Obtain Arararagi as a slave"
+            itemDesc="Obtain Arararagi"
             price="0.99"
             daysLater={14}
             imgSrc={arraragi}

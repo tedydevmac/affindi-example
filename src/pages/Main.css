@@ -70,3 +70,33 @@ body {
   display: flex;
   gap: 1rem;
 }
+
+/* ...existing dark mode styles... */
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-mode .shoplogo {
+  /* Add light mode styles for shoplogo if needed */
+}
+
+.light-mode .searchbar {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.light-mode .icondiv a .icon {
+  color: #000000;
+}
+
+.light-mode .card-container {
+  /* Add light mode styles for card-container if needed */
+}
+
+.light-mode .card-row {
+  /* Add light mode styles for card-row if needed */
+}
+
+/* Add any other light mode specific styles here */
